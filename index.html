@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>50 cosas que amo de ti</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -96,7 +96,7 @@
         // Fade-in animation on scroll
         const faders = document.querySelectorAll('.fade-in');
         const appearOptions = {
-            threshold: 0.3
+            threshold: 0.2
         };
         const appearOnScroll = new IntersectionObserver(function(entries, observer) {
             entries.forEach(entry => {
