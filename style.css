@@ -11,6 +11,79 @@ body {
     min-height: 100vh;
     padding: 0;
     background-size: 54px 54px, cover;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated Hearts Background */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: url('images/heart.gif') no-repeat center/contain;
+    opacity: 0.4;
+    animation: float 15s linear infinite;
+}
+
+.floating-heart:nth-child(1) {
+    left: 10%;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+.floating-heart:nth-child(2) {
+    left: 25%;
+    top: 20%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+.floating-heart:nth-child(3) {
+    left: 35%;
+    top: 40%;
+    animation-duration: 25s;
+    animation-delay: 4s;
+}
+.floating-heart:nth-child(4) {
+    right: 25%;
+    top: 15%;
+    animation-duration: 22s;
+    animation-delay: 1s;
+}
+.floating-heart:nth-child(5) {
+    right: 15%;
+    top: 35%;
+    animation-duration: 19s;
+    animation-delay: 3s;
+}
+.floating-heart:nth-child(6) {
+    left: 65%;
+    top: 65%;
+    animation-duration: 21s;
+    animation-delay: 5s;
+}
+.floating-heart:nth-child(7) {
+    left: 5%;
+    top: 75%;
+    animation-duration: 24s;
+    animation-delay: 0s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(1.2);
+    }
 }
 
 header, main, footer {
@@ -155,10 +228,27 @@ main {
     height: auto;
     border-radius: 1.3rem;
     object-fit: cover;
+    object-position: center center; /* Default position */
     box-shadow: 0 4px 32px 0 rgba(232,120,160,0.14);
     opacity: 0;
     transform: scale(0.97);
     transition: opacity 0.8s, transform 0.8s;
+}
+/* Specific image position adjustments */
+.list-photo:nth-of-type(4) img {
+    object-position: center 30%; /* Move image up to show lower portion */
+}
+.list-photo:nth-of-type(6) img {
+    object-position: center 35%;
+}
+.list-photo:nth-of-type(7) img {
+    object-position: center 35%;
+}
+.list-photo:nth-of-type(8) img {
+    object-position: center 30%;
+}
+.list-photo:nth-of-type(10) img {
+    object-position: center 35%;
 }
 .list-photo img.appear {
     opacity: 1;
