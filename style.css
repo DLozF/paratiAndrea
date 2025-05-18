@@ -38,16 +38,22 @@ h1 {
 .heart {
     width: 32px;
     height: 32px;
-    background: url('https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/08/Heart_Full_JE3_BE3.png') no-repeat center center/contain;
+    background: url('images/heart.gif') no-repeat center center/contain;
     animation: pulse 1.2s infinite alternate;
 }
-
 .heart:nth-child(2) {
     animation-delay: 0.3s;
 }
 .heart:nth-child(3) {
     animation-delay: 0.6s;
 }
+@keyframes pulse {
+    to {
+        transform: scale(1.18);
+        filter: drop-shadow(0 0 10px #ff85a2);
+    }
+}
+
 
 @keyframes pulse {
     to {
