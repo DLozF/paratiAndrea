@@ -30,7 +30,7 @@ body {
   50% { transform: scale(1.05); }
 }
 
-/* Header decorations */
+/* Header hearts animation */
 .top-hearts {
   display: flex;
   justify-content: center;
@@ -54,7 +54,7 @@ body {
   }
 }
 
-/* General layout */
+/* Layout */
 header {
   text-align: center;
   padding: 2.2rem 0 1.2rem 0;
@@ -103,7 +103,7 @@ footer {
   z-index: 1;
 }
 
-/* Numbered list styles */
+/* Numbered list */
 .reasons {
   list-style: none;
   padding: 0;
@@ -132,7 +132,7 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Photo styling */
+/* Photos */
 .list-photo {
   display: flex;
   justify-content: center;
@@ -156,6 +156,23 @@ footer {
 .list-photo img.appear {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Adjust specific images vertically to show more face */
+.list-photo:nth-of-type(4) img {
+  object-position: center 30%;
+}
+.list-photo:nth-of-type(6) img {
+  object-position: center 35%;
+}
+.list-photo:nth-of-type(7) img {
+  object-position: center 35%;
+}
+.list-photo:nth-of-type(8) img {
+  object-position: center 30%;
+}
+.list-photo:nth-of-type(10) img {
+  object-position: center 35%;
 }
 
 /* Fade-in animation */
