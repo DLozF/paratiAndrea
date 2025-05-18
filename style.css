@@ -24,65 +24,72 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    overflow: hidden;
 }
 
 .floating-heart {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     background: url('images/heart.gif') no-repeat center/contain;
-    opacity: 0.4;
-    animation: float 15s linear infinite;
+    opacity: 0.6;
+    animation: pulse-float 4s ease-in-out infinite;
 }
 
 .floating-heart:nth-child(1) {
     left: 10%;
-    animation-duration: 20s;
-    animation-delay: 0s;
+    top: 15%;
+    animation-duration: 4.5s;
 }
 .floating-heart:nth-child(2) {
     left: 25%;
-    top: 20%;
-    animation-duration: 18s;
-    animation-delay: 2s;
+    top: 30%;
+    animation-duration: 5s;
+    animation-delay: 0.7s;
 }
 .floating-heart:nth-child(3) {
-    left: 35%;
-    top: 40%;
-    animation-duration: 25s;
-    animation-delay: 4s;
+    left: 75%;
+    top: 20%;
+    animation-duration: 4.8s;
+    animation-delay: 1.2s;
 }
 .floating-heart:nth-child(4) {
-    right: 25%;
-    top: 15%;
-    animation-duration: 22s;
-    animation-delay: 1s;
+    left: 60%;
+    top: 65%;
+    animation-duration: 5.2s;
+    animation-delay: 0.5s;
 }
 .floating-heart:nth-child(5) {
-    right: 15%;
-    top: 35%;
-    animation-duration: 19s;
-    animation-delay: 3s;
+    left: 15%;
+    top: 70%;
+    animation-duration: 4.7s;
+    animation-delay: 1s;
 }
 .floating-heart:nth-child(6) {
-    left: 65%;
-    top: 65%;
-    animation-duration: 21s;
-    animation-delay: 5s;
+    left: 45%;
+    top: 45%;
+    animation-duration: 5.5s;
+    animation-delay: 0.3s;
 }
 .floating-heart:nth-child(7) {
-    left: 5%;
-    top: 75%;
-    animation-duration: 24s;
-    animation-delay: 0s;
+    left: 85%;
+    top: 80%;
+    animation-duration: 4.9s;
+    animation-delay: 0.8s;
 }
 
-@keyframes float {
+@keyframes pulse-float {
     0% {
-        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
     }
     100% {
-        transform: translateY(-100px) rotate(360deg) scale(1.2);
+        transform: scale(0.8);
+        opacity: 0.4;
     }
 }
 
