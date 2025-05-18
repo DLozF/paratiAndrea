@@ -171,7 +171,7 @@ main {
     color: #e75480;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.18rem;
-    padding: 1.08rem 0.8rem 1.08rem 3.4em; /* Makes room for the custom number */
+    padding: 1.08rem 0.8rem 1.08rem 3.4em;
     margin: 0.1rem 0;
     background: none;
     border-radius: 0.9rem;
@@ -235,27 +235,11 @@ main {
     height: auto;
     border-radius: 1.3rem;
     object-fit: cover;
-    object-position: center center; /* Default position */
+    object-position: center center;
     box-shadow: 0 4px 32px 0 rgba(232,120,160,0.14);
     opacity: 0;
     transform: scale(0.97);
     transition: opacity 0.8s, transform 0.8s;
-}
-/* Specific image position adjustments */
-.list-photo:nth-of-type(4) img {
-    object-position: center 30%; /* Move image up to show lower portion */
-}
-.list-photo:nth-of-type(6) img {
-    object-position: center 35%;
-}
-.list-photo:nth-of-type(7) img {
-    object-position: center 35%;
-}
-.list-photo:nth-of-type(8) img {
-    object-position: center 30%;
-}
-.list-photo:nth-of-type(10) img {
-    object-position: center 35%;
 }
 .list-photo img.appear {
     opacity: 1;
@@ -297,18 +281,18 @@ footer {
     }
     .reasons li {
         font-size: 1.01rem;
-        padding: 0.6rem 0.5rem 0.6rem 2.8em; /* Increased padding-left to make room for numbers */
+        padding: 0.6rem 0.5rem 0.6rem 2.8em;
         border-radius: 0.7rem;
         display: flex;
         align-items: center;
-        min-height: 2.5em; /* Ensure minimum height for each item */
+        min-height: 2.5em;
     }
     .reasons li:before {
         font-size: 1.06em;
         width: 1.5em;
         height: 1.5em;
         left: 0.7em;
-        border: 1px solid #ffcbe5; /* Thinner border */
+        border: 1px solid #ffcbe5;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -318,11 +302,9 @@ footer {
         padding: 0 0.6rem;
     }
     main {
-        padding: 0.5rem 0.3rem 1.1rem 0.3rem; /* Add a bit more padding */
+        padding: 0.5rem 0.3rem 1.1rem 0.3rem;
     }
-    
-    /* Fix for number counter to ensure it doesn't reset */
     .list-photo {
-        counter-increment: none; /* Don't count the photo divs */
+        counter-increment: none;
     }
 }
