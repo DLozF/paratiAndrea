@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>50 Reasons Why I Love You</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="hearts">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <h1>50 Reasons Why I Love You</h1>
+        <p class="subtitle">For my favorite person 💖</p>
+    </header>
+
+    <section class="intro">
+        <p>
+            I made this just for you! Here are 50 reasons why you make my heart go *brrr* every single day.
+        </p>
+    </section>
+
+    <main>
+        <ul class="reasons">
+            <li>Tus ojos bonitos</li>
+            <li>Tu risa</li>
+            <li>Tu sonrisa</li>
+            <li>Lo linda que eres</li>
+            <li>Tu voz</li>
+            <li>Tu afección</li>
+            <li>La cara que haces cuando te chiveas</li>
+            <li>Lo inquieta que eres</li>
+            <li>Cuando se te ponen los ojos chinitos</li>
+            <li>Tu "AWWWWWWWW chikiii"</li>
+            <li>Que tan "buena" eres para los deportes</li>
+            <li>Como tratas a todos con respeto</li>
+            <li>La forma que me ves cuando traigo algo</li>
+            <li>Tu perfume</li>
+            <li>Como me haces reír</li>
+            <li>Que tan inteligente eres</li>
+            <li>Tus chistes</li>
+            <li>Como te gusta leer</li>
+            <li>Lo rara que eres</li>
+            <li>Cuánto te preocupas por mí</li>
+            <li>La forma en la que me entiendes</li>
+            <li>When you reassure me</li>
+            <li>Cuando me dices chiki</li>
+            <li>Tus chistes</li>
+            <li>Tus ojos cuando te emocionas</li>
+            <li>Que eres mi mejor amiga</li>
+            <li>La confianza que tengo contigo</li>
+            <li>Que me escuchas cuando hablo mucho</li>
+            <li>Que te puedo contar todo</li>
+            <li>Las cosas que haces por mí</li>
+            <li>Que siempre quieres lo mejor para mí</li>
+            <li>Como te pones celosa</li>
+            <li>Tu paciencia conmigo</li>
+            <li>Las caritas que haces en las fotos</li>
+            <li>Como me haces sentir seguro</li>
+            <li>Que eres auténtica</li>
+            <li>Tus mensajes de buenos días</li>
+            <li>Tus mensajes de buenas noches</li>
+            <li>Que te importa mi familia</li>
+            <li>Como celebras mis logros</li>
+            <li>Que te emocionas conmigo</li>
+            <li>Tu amor por los animales</li>
+            <li>Tus abrazos</li>
+            <li>Tus besos</li>
+            <li>Cuando te ríes de mis chistes malos</li>
+            <li>Que eres mi persona favorita</li>
+            <li>Que haces todo especial</li>
+            <li>Que eres simplemente tú</li>
+            <li>Porque te amo más cada día</li>
+        </ul>
+
+        <!-- Example Photo Section (put your images in an 'images' folder) -->
+        <section class="gallery">
+            <h2>Nuestros Momentos 💕</h2>
+            <div class="photos">
+                <img src="images/photo1.jpg" alt="Nosotros 1" class="fade-in">
+                <img src="images/photo2.jpg" alt="Nosotros 2" class="fade-in">
+                <img src="images/photo3.jpg" alt="Nosotros 3" class="fade-in">
+                <!-- Add more as you want -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Con todo mi amor, Diego 💘</p>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.3
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
