@@ -1,131 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    background: #ffe2ec;
-    color: #e75480;
-    overflow-x: hidden;
-    position: relative;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #ffe2ec;
+  color: #e75480;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Subtle background using heart.gif */
+/* Background hearts (heart.gif) */
 .hearts::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('images/heart.gif');
-    background-size: 60px;
-    background-repeat: repeat;
-    opacity: 0.08;
-    z-index: -1;
-    animation: pulse 4s infinite;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('images/heart.gif');
+  background-size: 60px;
+  background-repeat: repeat;
+  opacity: 0.08;
+  z-index: -1;
+  animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
+/* Header decorations */
 .top-hearts {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .heart {
-    width: 32px;
-    height: 32px;
-    background: url('images/heart.gif') no-repeat center center/contain;
-    animation: pulseHeart 1.2s infinite alternate;
+  width: 32px;
+  height: 32px;
+  background: url('images/heart.gif') no-repeat center center/contain;
+  animation: pulseHeart 1.2s infinite alternate;
 }
 .heart:nth-child(2) { animation-delay: 0.3s; }
 .heart:nth-child(3) { animation-delay: 0.6s; }
 
 @keyframes pulseHeart {
-    to {
-        transform: scale(1.18);
-        filter: drop-shadow(0 0 10px #ff85a2);
-    }
+  to {
+    transform: scale(1.18);
+    filter: drop-shadow(0 0 10px #ff85a2);
+  }
 }
 
+/* General layout */
 header {
-    text-align: center;
-    padding: 2.2rem 0 1.2rem 0;
-    background: transparent;
-    z-index: 1;
-    position: relative;
+  text-align: center;
+  padding: 2.2rem 0 1.2rem 0;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-    font-size: 2.2rem;
-    margin: 0.2em 0 0.5em 0;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: #e75480;
+  font-size: 2.2rem;
+  margin: 0.2em 0 0.5em 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #e75480;
 }
 
 .subtitle {
-    font-size: 1.15rem;
-    color: #b280a0;
-    margin-bottom: 1.4rem;
+  font-size: 1.15rem;
+  color: #b280a0;
+  margin-bottom: 1.4rem;
 }
 
 .intro {
-    text-align: center;
-    font-size: 1.2rem;
-    margin: 1.5rem 0 2.2rem 0;
-    color: #af5c87;
-    font-weight: 500;
-    padding: 0 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1.5rem 0 2.2rem 0;
+  color: #af5c87;
+  font-weight: 500;
+  padding: 0 1.2rem;
 }
 
 main {
-    max-width: 700px;
-    margin: auto;
-    padding: 1.2rem 0.5rem 2.5rem 0.5rem;
-    position: relative;
-    z-index: 1;
+  max-width: 700px;
+  margin: auto;
+  padding: 1.2rem 0.5rem 2.5rem 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 footer {
-    text-align: center;
-    color: #b280a0;
-    font-size: 1.08rem;
-    margin: 2.5rem 0 1rem 0;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  color: #b280a0;
+  font-size: 1.08rem;
+  margin: 2.5rem 0 1rem 0;
+  position: relative;
+  z-index: 1;
 }
 
-/* Example of reason item style */
+/* Numbered list styles */
 .reasons {
-    list-style: none;
-    padding: 0;
-    counter-reset: loveCount;
+  list-style: none;
+  padding: 0;
+  counter-reset: loveCount;
 }
 
 .reasons li {
-    counter-increment: loveCount;
-    position: relative;
-    font-size: 1.15rem;
-    font-weight: 700;
-    padding: 1rem 1rem 1rem 3.2rem;
-    margin-bottom: 1.2rem;
-    background-color: rgba(255,255,255,0.4);
-    border-radius: 1rem;
+  counter-increment: loveCount;
+  position: relative;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 1rem 1rem 1rem 3.2rem;
+  margin-bottom: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
 }
 
 .reasons li::before {
-    content: counter(loveCount) ".";
-    position: absolute;
-    left: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    color: #ffb8d2;
-    font-size: 1.2rem;
+  content: counter(loveCount) ".";
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  color: #ffb8d2;
+  font-size: 1.2rem;
+}
+
+/* Photo styling */
+.list-photo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.list-photo img {
+  width: 90vw;
+  max-width: 420px;
+  aspect-ratio: 4/3;
+  height: auto;
+  border-radius: 1.3rem;
+  object-fit: cover;
+  object-position: center center;
+  box-shadow: 0 4px 32px rgba(232, 120, 160, 0.14);
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.list-photo img.appear {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .reasons li {
+    font-size: 1.01rem;
+    padding: 0.8rem 0.5rem 0.8rem 2.5rem;
+  }
+
+  .reasons li::before {
+    font-size: 1rem;
+    left: 0.9rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+  }
+
+  .list-photo img {
+    width: 96vw;
+    border-radius: 1rem;
+  }
 }
