@@ -1,96 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
-/* Hearts SVG background and soft gradient */
+/* Use heart.gif as repeating background! */
 body {
-    background: 
-        url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 45S5 31.89 5 18.2C5 8.27 18.2 5.55 24 14.61C29.8 5.55 43 8.27 43 18.2C43 31.89 24 45 24 45Z' fill='%23ffc1d9' fill-opacity='0.45'/%3E%3C/svg%3E") repeat,
+    background:
+        url('images/heart.gif') repeat,
         linear-gradient(120deg, #ffe2ec 0%, #fff5e6 100%);
     font-family: 'Quicksand', sans-serif;
     margin: 0;
     color: #e75480;
     min-height: 100vh;
     padding: 0;
-    background-size: 54px 54px, cover;
+    background-size: 48px 48px, cover; /* tweak for bigger/smaller hearts */
     position: relative;
     overflow-x: hidden;
-}
-
-/* Animated Hearts Background */
-.floating-hearts {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.floating-heart {
-    position: absolute;
-    width: 55px;
-    height: 55px;
-    background: url('images/heart.gif') no-repeat center/contain;
-    opacity: 0.6;
-    animation: pulse-float 4s ease-in-out infinite;
-}
-
-.floating-heart:nth-child(1) {
-    left: 10%;
-    top: 15%;
-    animation-duration: 4.5s;
-}
-.floating-heart:nth-child(2) {
-    left: 25%;
-    top: 30%;
-    animation-duration: 5s;
-    animation-delay: 0.7s;
-}
-.floating-heart:nth-child(3) {
-    left: 75%;
-    top: 20%;
-    animation-duration: 4.8s;
-    animation-delay: 1.2s;
-}
-.floating-heart:nth-child(4) {
-    left: 60%;
-    top: 65%;
-    animation-duration: 5.2s;
-    animation-delay: 0.5s;
-}
-.floating-heart:nth-child(5) {
-    left: 15%;
-    top: 70%;
-    animation-duration: 4.7s;
-    animation-delay: 1s;
-}
-.floating-heart:nth-child(6) {
-    left: 45%;
-    top: 45%;
-    animation-duration: 5.5s;
-    animation-delay: 0.3s;
-}
-.floating-heart:nth-child(7) {
-    left: 85%;
-    top: 80%;
-    animation-duration: 4.9s;
-    animation-delay: 0.8s;
-}
-
-@keyframes pulse-float {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.4;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(0.8);
-        opacity: 0.4;
-    }
 }
 
 header, main, footer {
