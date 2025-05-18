@@ -18,13 +18,11 @@
     </header>
 
     <section class="intro">
-        <p>
-            Espero que te guste :)
-        </p>
+        <p>Espero que te guste :)</p>
     </section>
 
     <main>
-        <ul class="reasons">
+        <ol class="reasons">
             <li>Tus ojos bonitos</li>
             <li>Tu risa</li>
             <li>Tu sonrisa</li>
@@ -85,7 +83,7 @@
             <li>Cuando me dices Te Amo</li>
             <li>Y por ultima cosa que amo de ti, eres tu. Andrea.</li>
             <div class="list-photo"><img src="images/10.jpg" alt="Moment 10" class="fade-in"></div>
-        </ul>
+        </ol>
     </main>
 
     <footer>
@@ -95,17 +93,12 @@
     <script>
         // Fade-in animation on scroll
         const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = {
-            threshold: 0.2
-        };
+        const appearOptions = { threshold: 0.2 };
         const appearOnScroll = new IntersectionObserver(function(entries, observer) {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
-                }
+                if (!entry.isIntersecting) { return; }
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
             });
         }, appearOptions);
 
