@@ -107,6 +107,30 @@ main {
     }
 }
 
+/* --- ADDED: Scattered Photo Styles for List --- */
+.list-photo {
+    display: flex;
+    justify-content: center;
+    margin: 1.2rem 0;
+}
+
+.list-photo img {
+    width: 220px;
+    height: 220px;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    box-shadow: 0 4px 18px 0 rgba(232,120,160,0.13);
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.list-photo img.appear {
+    opacity: 1;
+    transform: scale(1);
+}
+/* --- END ADDED --- */
+
 .gallery {
     margin-top: 2rem;
     text-align: center;
@@ -161,5 +185,10 @@ footer {
     .photos img {
         width: 100px;
         height: 100px;
+    }
+    /* Make scattered photos smaller on mobile */
+    .list-photo img {
+        width: 120px;
+        height: 120px;
     }
 }
