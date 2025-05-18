@@ -163,7 +163,7 @@ footer {
   object-position: center 30%;
 }
 .list-photo:nth-of-type(6) img {
-  object-position: center 35%;
+  object-position: center 45%;
 }
 .list-photo:nth-of-type(7) img {
   object-position: center 35%;
@@ -172,7 +172,7 @@ footer {
   object-position: center 30%;
 }
 .list-photo:nth-of-type(10) img {
-  object-position: center 35%;
+  object-position: center 42%;
 }
 
 /* Fade-in animation */
