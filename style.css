@@ -9,7 +9,6 @@ body {
   position: relative;
 }
 
-/* Background hearts (heart.gif) */
 .hearts::before {
   content: "";
   position: fixed;
@@ -30,7 +29,6 @@ body {
   50% { transform: scale(1.05); }
 }
 
-/* Header hearts animation */
 .top-hearts {
   display: flex;
   justify-content: center;
@@ -54,7 +52,6 @@ body {
   }
 }
 
-/* Layout */
 header {
   text-align: center;
   padding: 2.2rem 0 1.2rem 0;
@@ -103,7 +100,6 @@ footer {
   z-index: 1;
 }
 
-/* Numbered list */
 .reasons {
   list-style: none;
   padding: 0;
@@ -132,7 +128,6 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Photos */
 .list-photo {
   display: flex;
   justify-content: center;
@@ -158,12 +153,11 @@ footer {
   transform: scale(1);
 }
 
-/* Adjust specific images vertically to show more face */
 .list-photo:nth-of-type(4) img {
   object-position: center 30%;
 }
 .list-photo:nth-of-type(6) img {
-  object-position: center 30%;
+  object-position: center 45%;
 }
 .list-photo:nth-of-type(7) img {
   object-position: center 35%;
@@ -172,10 +166,9 @@ footer {
   object-position: center 30%;
 }
 .list-photo:nth-of-type(10) img {
-  object-position: center 30%;
+  object-position: center 42%;
 }
 
-/* Fade-in animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -187,7 +180,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.8rem;
@@ -211,4 +203,20 @@ footer {
     width: 96vw;
     border-radius: 1rem;
   }
+}
+
+/* Flying hearts when #50 appears */
+.flying-heart {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: url('images/heart.gif') no-repeat center center/contain;
+  pointer-events: none;
+  z-index: 99;
+  animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.8); opacity: 1; }
+  100% { transform: translateY(-150px) scale(1.2); opacity: 0; }
 }
