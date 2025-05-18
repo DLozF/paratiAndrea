@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Background hearts -->
   <div class="hearts"></div>
 
   <header>
@@ -103,8 +104,10 @@
   </footer>
 
   <script>
+    // Fade-in on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = { threshold: 0.2 };
+
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
@@ -114,6 +117,29 @@
     }, appearOptions);
 
     faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // 🎉 Flying hearts when #50 appears
+    const lastItem = document.querySelector('.reasons li:last-of-type');
+    const heartContainer = document.createElement('div');
+    document.body.appendChild(heartContainer);
+
+    const heartTrigger = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          for (let i = 0; i < 20; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'flying-heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = Math.random() * 50 + 50 + 'vh';
+            heartContainer.appendChild(heart);
+            setTimeout(() => heart.remove(), 3000);
+          }
+          heartTrigger.disconnect(); // run only once
+        }
+      });
+    });
+
+    heartTrigger.observe(lastItem);
   </script>
 </body>
 </html>
