@@ -150,7 +150,7 @@
 
     heartTrigger.observe(lastItem);
 
-    // TIMER SCRIPT
+    // TIMER SCRIPT (vertical style)
     function pad(n) { return n.toString().padStart(2, '0'); }
     function updateTimer() {
       const start = new Date('2025-03-18T19:00:00');
@@ -169,9 +169,9 @@
       const seconds = diff % 60;
 
       let txt = '';
-      if (years > 0) txt += `<b>${years}</b> años, `;
-      if (months > 0 || years > 0) txt += `<b>${months}</b> meses, `;
-      if (days > 0 || months > 0 || years > 0) txt += `<b>${days}</b> días, `;
+      if (years > 0) txt += `<b>${years}</b> años<br>`;
+      txt += `<b>${months}</b> meses<br>`;
+      txt += `<b>${days}</b> días<br>`;
       txt += `<b>${pad(hours)}</b>h <b>${pad(minutes)}</b>m <b>${pad(seconds)}</b>s`;
 
       document.getElementById('timer').innerHTML = txt;
