@@ -220,3 +220,48 @@ footer {
   0% { transform: translateY(0) scale(0.8); opacity: 1; }
   100% { transform: translateY(-150px) scale(1.2); opacity: 0; }
 }
+
+/* TOGETHER TIMER STYLES */
+.together-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.17rem;
+  font-family: 'Quicksand', cursive, sans-serif;
+  background: rgba(255, 200, 230, 0.53);
+  color: #e75480;
+  padding: 1.1rem 1.6rem;
+  border-radius: 1.8rem;
+  margin: 1.8rem auto 1.1rem auto;
+  box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13);
+  width: fit-content;
+  animation: glow 2.8s ease-in-out infinite alternate;
+  position: relative;
+}
+
+.together-timer .timer-label {
+  font-weight: bold;
+  font-size: 1.17rem;
+  margin-right: 0.5em;
+  color: #af5c87;
+  letter-spacing: 1px;
+}
+
+.together-timer .timer-heart {
+  font-size: 1.7em;
+  animation: heartbeat 1.2s infinite;
+  margin-left: 0.7em;
+  filter: drop-shadow(0 0 10px #ffb8d2);
+}
+
+@keyframes glow {
+  from { box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13); }
+  to { box-shadow: 0 0 24px 6px #ffe3ee88; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  20% { transform: scale(1.17); }
+  40% { transform: scale(1); }
+}
