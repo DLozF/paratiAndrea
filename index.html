@@ -33,54 +33,63 @@
       <li>Lo linda que eres</li>
       <li>Tu voz</li>
       <div class="list-photo"><img src="images/1.jpg" alt="Foto 1" class="fade-in"></div>
+
       <li>Tu afección</li>
       <li>La cara que haces cuando te chiveas</li>
       <li>Lo inquieta que eres</li>
       <li>Cuando se te ponen los ojos chinitos</li>
       <li>Tu "AWWWWWWWW chikiii"</li>
       <div class="list-photo"><img src="images/2.jpg" alt="Foto 2" class="fade-in"></div>
+
       <li>Que tan "buena" eres para los deportes</li>
       <li>Como tratas a todos con respeto</li>
       <li>La forma que me ves cuando traigo algo</li>
       <li>Tu perfume</li>
       <li>Como me haces reír</li>
       <div class="list-photo"><img src="images/3.jpg" alt="Foto 3" class="fade-in"></div>
+
       <li>Que tan inteligente que eres</li>
       <li>Tus chistes</li>
       <li>Como te gusta leer</li>
       <li>Lo rara que eres</li>
       <li>Cuánto te preocupas por mí</li>
       <div class="list-photo"><img src="images/4.jpg" alt="Foto 4" class="fade-in"></div>
+
       <li>La forma en la que me entiendes</li>
       <li>When you reassure me</li>
       <li>Cuando me dices chiki</li>
       <li>Tu felicidad</li>
       <li>Tus ojos cuando te doy matcha</li>
       <div class="list-photo"><img src="images/5.jpg" alt="Foto 5" class="fade-in"></div>
+
       <li>La forma que te comunicas conmigo</li>
       <li>Como te encanta el tequila</li>
       <li>Tus cachetes</li>
       <li>Lo suave que está tu piel</li>
       <li>Tu amor por pugs</li>
       <div class="list-photo"><img src="images/6.jpg" alt="Foto 6" class="fade-in"></div>
+
       <li>Cuando me dices que me extrañas</li>
       <li>Tu lealtad</li>
       <li>Tu presencia</li>
       <li>Tu amor</li>
       <li>Cuando te acuerdas de las cosas importantes</li>
       <div class="list-photo"><img src="images/7.jpg" alt="Foto 7" class="fade-in"></div>
+
       <li>Cuando me marcas</li>
       <li>Como nunca me podría enojar contigo</li>
       <li>Como siempre puedo confiar en ti</li>
       <li>Cuando me motivas</li>
       <li>Tu honestidad</li>
       <div class="list-photo"><img src="images/8.jpg" alt="Foto 8" class="fade-in"></div>
+
       <li>Cuando me tomas fotos</li>
       <li>Cuando me publicas en tus historias</li>
       <li>Como nunca me siento juzgado contigo</li>
       <li>Cuando me agarras la mano</li>
       <li>Cuando me das abrazos</li>
       <div class="list-photo"><img src="images/9.jpg" alt="Foto 9" class="fade-in"></div>
+
       <li>Tu personalidad</li>
       <li>Tu amor por Dios</li>
       <li>Como me ayudas a abrirme</li>
@@ -92,10 +101,6 @@
 
   <footer>
     <p>Con amor, Diego.</p>
-    <div id="timer-box">
-      <span>Llevamos juntos:</span>
-      <span id="timer"></span>
-    </div>
   </footer>
 
   <script>
@@ -135,42 +140,6 @@
     });
 
     heartTrigger.observe(lastItem);
-
-    // 🕒 Relationship timer
-    function updateTimer() {
-      const startDate = new Date("2023-03-18T19:00:00"); // <-- March 18, 2023, 7:00 pm
-      const now = new Date();
-      let diff = now - startDate;
-
-      const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-      diff -= years * 1000 * 60 * 60 * 24 * 365.25;
-
-      const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
-      diff -= months * 1000 * 60 * 60 * 24 * 30.44;
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      diff -= days * 1000 * 60 * 60 * 24;
-
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      diff -= hours * 1000 * 60 * 60;
-
-      const minutes = Math.floor(diff / (1000 * 60));
-      diff -= minutes * 1000 * 60;
-
-      const seconds = Math.floor(diff / 1000);
-
-      let text = "";
-      if (years > 0) text += years + " años, ";
-      if (months > 0 || years > 0) text += months + " meses, ";
-      text += days + " días, ";
-      text += hours.toString().padStart(2, '0') + " horas, ";
-      text += minutes.toString().padStart(2, '0') + " minutos, ";
-      text += seconds.toString().padStart(2, '0') + " segundos";
-      document.getElementById('timer').textContent = text;
-    }
-
-    setInterval(updateTimer, 1000);
-    updateTimer();
   </script>
 </body>
 </html>
