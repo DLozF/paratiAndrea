@@ -232,42 +232,30 @@ footer {
 }
 
 .together-timer #timer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.6;
   font-size: 1.1em;
   color: #e75480;
   font-weight: 500;
 }
 
-.timer-line {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.timer-unit {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.timer-number {
-  font-size: 1.3em;
+/* Style the bold numbers */
+.together-timer #timer b {
+  font-size: 1.4em;
   font-weight: 700;
   color: #e75480;
 }
 
-.timer-text {
-  font-size: 1em;
-  font-weight: 500;
-  color: #af5c87;
+/* Style individual lines in the timer */
+.timer-months, .timer-days {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.timer-time {
+  display: block;
+  font-size: 1.05em;
 }
 
 @keyframes glow {
@@ -310,23 +298,20 @@ footer {
   
   .together-timer #timer {
     font-size: 1em;
-    gap: 4px;
+    line-height: 1.4;
   }
   
-  .timer-line {
-    gap: 6px;
+  .together-timer #timer b {
+    font-size: 1.3em;
   }
   
-  .timer-unit {
-    gap: 3px;
+  .timer-months, .timer-days {
+    font-size: 1em;
+    margin-bottom: 6px;
   }
   
-  .timer-number {
-    font-size: 1.2em;
-  }
-  
-  .timer-text {
-    font-size: 0.9em;
+  .timer-time {
+    font-size: 0.95em;
   }
 }
 
@@ -335,15 +320,15 @@ footer {
     padding: 1rem 1.2rem;
   }
   
-  .timer-line {
-    gap: 4px;
+  .together-timer #timer b {
+    font-size: 1.2em;
   }
   
-  .timer-number {
-    font-size: 1.15em;
+  .timer-months, .timer-days {
+    font-size: 0.95em;
   }
   
-  .timer-text {
-    font-size: 0.85em;
+  .timer-time {
+    font-size: 0.9em;
   }
 }
