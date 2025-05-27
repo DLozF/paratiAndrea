@@ -138,7 +138,7 @@
     });
     heartTrigger.observe(lastItem);
 
-    // Timer code for "2 meses 8 días 08h, 34m, and 03s 💖"
+    // Timer with line breaks: meses, días, then h, m, s
     function pad(n) {
       return n.toString().padStart(2, '0');
     }
@@ -159,9 +159,9 @@
       const seconds = diff % 60;
 
       let txt = '';
-      if (years > 0) txt += `<b>${years}</b> años `;
-      txt += `<b>${months}</b> meses `;
-      txt += `<b>${days}</b> días `;
+      if (years > 0) txt += `<b>${years}</b> años<br>`;
+      txt += `<b>${months}</b> meses<br>`;
+      txt += `<b>${days}</b> días<br>`;
       txt += `<b>${pad(hours)}</b>h, <b>${pad(minutes)}</b>m, and <b>${pad(seconds)}</b>s 💖`;
 
       document.getElementById('timer').innerHTML = txt;
