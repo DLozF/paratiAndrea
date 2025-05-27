@@ -221,7 +221,14 @@ footer {
   100% { transform: translateY(-150px) scale(1.2); opacity: 0; }
 }
 
-/* TOGETHER TIMER STYLES */
+/* --- TIMER CENTERING AND STYLES --- */
+.timer-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .together-timer {
   display: flex;
   justify-content: center;
@@ -236,6 +243,8 @@ footer {
   margin: 1.8rem auto 1.1rem auto;
   box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13);
   width: fit-content;
+  max-width: 95vw;
+  box-sizing: border-box;
   animation: glow 2.8s ease-in-out infinite alternate;
   position: relative;
 }
