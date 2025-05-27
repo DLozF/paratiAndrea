@@ -153,12 +153,6 @@ footer {
   transform: scale(1);
 }
 
-.list-photo:nth-of-type(4) img { object-position: center 30%; }
-.list-photo:nth-of-type(6) img { object-position: center 27%; }
-.list-photo:nth-of-type(7) img { object-position: center 35%; }
-.list-photo:nth-of-type(8) img { object-position: center 30%; }
-.list-photo:nth-of-type(10) img { object-position: center 27%; }
-
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -170,7 +164,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Flying hearts when #50 appears */
 .flying-heart {
   position: fixed;
   width: 40px;
@@ -180,13 +173,12 @@ footer {
   z-index: 99;
   animation: floatUp 3s ease-out forwards;
 }
-
 @keyframes floatUp {
   0% { transform: translateY(0) scale(0.8); opacity: 1; }
   100% { transform: translateY(-150px) scale(1.2); opacity: 0; }
 }
 
-/* --- TIMER CENTERING AND STYLES --- */
+/* Cute artsy timer box */
 .timer-wrapper {
   width: 100%;
   display: flex;
@@ -246,18 +238,6 @@ footer {
   color: #e75480;
 }
 
-/* Style individual lines in the timer */
-.timer-months, .timer-days {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 1.1em;
-}
-
-.timer-time {
-  display: block;
-  font-size: 1.05em;
-}
-
 @keyframes glow {
   from { box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13); }
   to { box-shadow: 0 0 24px 6px #ffe3ee88; }
@@ -285,33 +265,20 @@ footer {
     width: 96vw;
     border-radius: 1rem;
   }
-  
   .together-timer {
     padding: 1.2rem 1.5rem;
     font-size: 1rem;
     gap: 6px;
   }
-  
   .together-timer .timer-label {
     font-size: 1.05rem;
   }
-  
   .together-timer #timer {
     font-size: 1em;
     line-height: 1.4;
   }
-  
   .together-timer #timer b {
     font-size: 1.3em;
-  }
-  
-  .timer-months, .timer-days {
-    font-size: 1em;
-    margin-bottom: 6px;
-  }
-  
-  .timer-time {
-    font-size: 0.95em;
   }
 }
 
@@ -319,16 +286,7 @@ footer {
   .together-timer {
     padding: 1rem 1.2rem;
   }
-  
   .together-timer #timer b {
     font-size: 1.2em;
-  }
-  
-  .timer-months, .timer-days {
-    font-size: 0.95em;
-  }
-  
-  .timer-time {
-    font-size: 0.9em;
   }
 }
