@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
-/* Background */
+/* Hearts SVG background and soft gradient */
 body {
     background: 
         url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 45S5 31.89 5 18.2C5 8.27 18.2 5.55 24 14.61C29.8 5.55 43 8.27 43 18.2C43 31.89 24 45 24 45Z' fill='%23ffc1d9' fill-opacity='0.45'/%3E%3C/svg%3E") repeat,
@@ -177,51 +177,25 @@ footer {
     margin: 2.5rem 0 1rem 0;
 }
 
-/* --- CUTE ARTSY TIMER --- */
+/* Timer styles */
 #timer-box {
-    margin-top: 1.7em;
+    margin-top: 1.2em;
     color: #e75480;
-    font-size: 1.13em;
+    font-size: 1.05em;
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(120deg, #fff5fa 50%, #ffe5f2 100%);
-    padding: 1.1em 1.7em;
-    border-radius: 1.4em;
-    border: 2.5px dashed #ffb7d5;
-    box-shadow: 0 6px 32px 0 #ffdbed5e, 0 3px 18px 0 #fff2f9;
+    background: rgba(255,230,241,0.36);
+    padding: 0.8em 1.3em;
+    border-radius: 1em;
+    box-shadow: 0 1px 7px 0 rgba(252, 182, 193, 0.09);
     display: inline-block;
-    position: relative;
-    overflow: visible;
-    letter-spacing: 0.01em;
-    z-index: 2;
 }
 #timer-box span:first-child {
     font-weight: 700;
-    margin-right: 0.4em;
-    letter-spacing: 0.08em;
-    font-size: 1.05em;
-    color: #d06499;
+    margin-right: 0.3em;
 }
 #timer {
     font-weight: 700;
-    color: #b857a8;
-    text-shadow: 0 1px 6px #fff0f7;
-    letter-spacing: 0.03em;
-    font-size: 1.08em;
-}
-#timer-box::before {
-    content: "";
-    position: absolute;
-    left: -1.2em;
-    top: -1.2em;
-    width: 28px;
-    height: 28px;
-    background: url('images/heart.gif') no-repeat center center/contain;
-    opacity: 0.85;
-    z-index: 3;
-    animation: timer-heart 1.2s infinite alternate;
-}
-@keyframes timer-heart {
-    to { transform: scale(1.12) rotate(-10deg);}
+    color: #b95788;
 }
 
 /* Flying hearts (bonus!) */
@@ -287,15 +261,5 @@ footer {
     }
     main {
         padding: 0.5rem 0.1rem 1.1rem 0.1rem;
-    }
-    #timer-box {
-        font-size: 1em;
-        padding: 0.85em 0.8em;
-    }
-    #timer-box::before {
-        width: 22px;
-        height: 22px;
-        left: -0.9em;
-        top: -0.9em;
     }
 }
