@@ -264,6 +264,18 @@ footer {
   filter: drop-shadow(0 0 10px #ffb8d2);
 }
 
+.together-timer #timer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: flex-start;
+  line-height: 1.4;
+  font-size: 1.18em;
+}
+.together-timer #timer b {
+  font-size: 1.13em;
+}
+
 @keyframes glow {
   from { box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13); }
   to { box-shadow: 0 0 24px 6px #ffe3ee88; }
