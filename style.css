@@ -170,23 +170,6 @@ footer {
   transform: translateY(0);
 }
 
-@media (max-width: 600px) {
-  h1 { font-size: 1.8rem; }
-  .reasons li {
-    font-size: 1.01rem;
-    padding: 0.8rem 0.5rem 0.8rem 2.5rem;
-  }
-  .reasons li::before {
-    font-size: 1rem;
-    left: 0.9rem;
-  }
-  .intro { font-size: 1rem; }
-  .list-photo img {
-    width: 96vw;
-    border-radius: 1rem;
-  }
-}
-
 /* Flying hearts when #50 appears */
 .flying-heart {
   position: fixed;
@@ -213,14 +196,15 @@ footer {
 
 .together-timer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 1.17rem;
   font-family: 'Quicksand', cursive, sans-serif;
   background: rgba(255, 200, 230, 0.53);
   color: #e75480;
-  padding: 1.1rem 1.6rem;
+  padding: 1.5rem 2rem;
   border-radius: 1.8rem;
   margin: 1.8rem auto 1.1rem auto;
   box-shadow: 0 6px 24px rgba(255, 134, 194, 0.13);
@@ -236,30 +220,54 @@ footer {
   font-size: 1.17rem;
   color: #af5c87;
   letter-spacing: 1px;
-  align-self: flex-start;
   line-height: 1.5;
+  margin-bottom: 5px;
 }
 
 .together-timer .timer-heart {
   font-size: 1.7em;
   animation: heartbeat 1.2s infinite;
   filter: drop-shadow(0 0 10px #ffb8d2);
-  align-self: flex-end;
+  margin-top: 8px;
 }
 
-.together-timer #timer {\
-  display: block;\
-  text-align: center;\
-  line-height: 1.3;\
-  font-size: 1.22em;\
-  color: #e75480;\
-  font-weight: 700;\
+.together-timer #timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  line-height: 1.4;
+  font-size: 1.1em;
+  color: #e75480;
+  font-weight: 500;
 }
 
-.together-timer #timer b {\
-  font-size: 1.15em;\
-  font-weight: 700;\
-  color: #e75480;\
+.timer-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timer-unit {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.timer-number {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #e75480;
+}
+
+.timer-text {
+  font-size: 1em;
+  font-weight: 500;
+  color: #af5c87;
 }
 
 @keyframes glow {
@@ -271,4 +279,71 @@ footer {
   0%, 100% { transform: scale(1); }
   20% { transform: scale(1.17); }
   40% { transform: scale(1); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .reasons li {
+    font-size: 1.01rem;
+    padding: 0.8rem 0.5rem 0.8rem 2.5rem;
+  }
+  .reasons li::before {
+    font-size: 1rem;
+    left: 0.9rem;
+  }
+  .intro { font-size: 1rem; }
+  .list-photo img {
+    width: 96vw;
+    border-radius: 1rem;
+  }
+  
+  .together-timer {
+    padding: 1.2rem 1.5rem;
+    font-size: 1rem;
+    gap: 6px;
+  }
+  
+  .together-timer .timer-label {
+    font-size: 1.05rem;
+  }
+  
+  .together-timer #timer {
+    font-size: 1em;
+    gap: 4px;
+  }
+  
+  .timer-line {
+    gap: 6px;
+  }
+  
+  .timer-unit {
+    gap: 3px;
+  }
+  
+  .timer-number {
+    font-size: 1.2em;
+  }
+  
+  .timer-text {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 400px) {
+  .together-timer {
+    padding: 1rem 1.2rem;
+  }
+  
+  .timer-line {
+    gap: 4px;
+  }
+  
+  .timer-number {
+    font-size: 1.15em;
+  }
+  
+  .timer-text {
+    font-size: 0.85em;
+  }
 }
