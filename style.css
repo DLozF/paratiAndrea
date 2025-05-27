@@ -255,6 +255,8 @@ footer {
   margin-right: 0.5em;
   color: #af5c87;
   letter-spacing: 1px;
+  align-self: flex-start;
+  line-height: 1.5;
 }
 
 .together-timer .timer-heart {
@@ -262,18 +264,23 @@ footer {
   animation: heartbeat 1.2s infinite;
   margin-left: 0.7em;
   filter: drop-shadow(0 0 10px #ffb8d2);
+  align-self: flex-end;
 }
 
 .together-timer #timer {
   display: flex;
   flex-direction: column;
-  gap: 0.1em;
+  gap: 0.15em;
   align-items: flex-start;
-  line-height: 1.4;
-  font-size: 1.18em;
+  line-height: 1.32;
+  font-size: 1.22em;
+  color: #e75480;
+  font-weight: 700;
 }
 .together-timer #timer b {
-  font-size: 1.13em;
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #e75480;
 }
 
 @keyframes glow {
