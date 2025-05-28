@@ -295,5 +295,5 @@ footer {
 .list-photo:nth-of-type(4) img  { object-position: center 30%; }  /* image 4 */
 .list-photo:nth-of-type(6) img  { object-position: center 30%; }  /* image 6 */
 .list-photo:nth-of-type(7) img  { object-position: center 30%; }  /* image 7 */
-.list-photo:nth-of-type(8) img  { object-position: center 62%; }  /* image 8 */
-.list-photo:nth-of-type(10) img { object-position: center 60%; }  /* image 10 */
+.list-photo:nth-of-type(8) img  { object-position: center 32%; }  /* image 8 */
+.list-photo:nth-of-type(10) img { object-position: center 30%; }  /* image 10 */
