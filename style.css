@@ -69,9 +69,9 @@ h1 {
 }
 
 .subtitle {
-  font-size: 2rem;
-  color: #5a4a4a; /* Updated to warm dark brown-gray */
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: #5a4a4a;
+  margin-bottom: 0.5rem; /* Reduced from 1.4rem */
 }
 
 .intro {
@@ -80,7 +80,7 @@ h1 {
   margin: 1.5rem 0 2.2rem 0;
   color: #6b5b5b; /* Updated to slightly lighter warm gray */
   font-weight: 500;
-  padding: 0 1rem;
+  padding: 0 1.2rem;
 }
 
 main {
